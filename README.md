@@ -16,6 +16,22 @@
 
 ---
 
+## 🎥 فيديو تعليمي سريع
+
+> **شاهد هذا الفيديو لتعلم كيفية تشغيل منصة INVAI بسرعة وسهولة** 🚀
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=eTNDgxoSqvk" target="_blank">
+    <img src="https://img.youtube.com/vi/eTNDgxoSqvk/maxresdefault.jpg" alt="شرح تشغيل منصة INVAI" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </a>
+</div>
+
+<div align="center">
+  <strong>👆 اضغط على الصورة لمشاهدة الفيديو على YouTube</strong>
+</div>
+
+---
+
 ## 🌟 الميزات الرئيسية
 
 - 🤖 **مساعد ذكي للاستثمار**: مخصص حصرياً لمنصة Invast Oman مع نظام RAG متطور
@@ -666,14 +682,6 @@ git push origin feature/new-feature
 # 3. إنشاء Pull Request
 # انتقل إلى GitHub وأنشئ PR
 ```
-
----
-
-## 🎥 فيديو تعليمي سريع
-
-شاهد هذا الفيديو لتعلم كيفية تشغيل منصة INVAI بسرعة:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eTNDgxoSqvk?si=s8D_le6gOC56tuOq" title="شرح تشغيل منصة INVAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 📞 الدعم والمساعدة
 
