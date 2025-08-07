@@ -16,19 +16,85 @@
 
 ---
 
-## 🎥 فيديو تعليمي سريع
+## 🎥 فيديوهات تعليمية سريعة
 
-> **شاهد هذا الفيديو لتعلم كيفية تشغيل منصة INVAI بسرعة وسهولة** 🚀
+> **شاهد هذه الفيديوهات لتعلم كيفية تشغيل منصة INVAI بسرعة وسهولة** 🚀
 
+### 📹 الفيديو الأول: الشرح الأساسي
 <div align="center">
   <a href="https://www.youtube.com/watch?v=eTNDgxoSqvk" target="_blank">
-    <img src="https://img.youtube.com/vi/eTNDgxoSqvk/maxresdefault.jpg" alt="شرح تشغيل منصة INVAI" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="https://img.youtube.com/vi/eTNDgxoSqvk/maxresdefault.jpg" alt="شرح تشغيل منصة INVAI - الجزء الأول" width="500" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </a>
+</div>
+
+### 📹 الفيديو الثاني: شرح متقدم
+<div align="center">
+  <a href="https://youtu.be/iKPD3vlMMb4" target="_blank">
+    <img src="https://img.youtube.com/vi/iKPD3vlMMb4/maxresdefault.jpg" alt="شرح تشغيل منصة INVAI - الجزء الثاني" width="500" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </a>
 </div>
 
 <div align="center">
-  <strong>👆 اضغط على الصورة لمشاهدة الفيديو على YouTube</strong>
+  <strong>👆 اضغط على أي صورة لمشاهدة الفيديو على YouTube</strong>
 </div>
+
+### ⚡ طريقة تشغيل سريعة إضافية
+
+يمكنك أيضاً تشغيل المنصة مباشرة باستخدام الأوامر التالية:
+
+```bash
+# انتقل إلى مجلد backend
+cd backend
+
+# شغل المنصة مباشرة
+uvicorn open_webui.main:app --host 0.0.0.0 --port 8080
+```
+
+### 🔧 حلول الأخطاء الشائعة
+
+**إذا واجهت أخطاء أثناء التشغيل، جرب الحلول التالية:**
+
+#### 🛠️ إعادة بناء المشروع
+```bash
+# تنظيف وإعادة بناء المشروع
+npm run build
+
+# أو استخدام Docker لإعادة البناء
+docker-compose build --no-cache
+docker-compose up -d
+```
+
+#### 📦 تحديث التبعيات
+```bash
+# تحديث تبعيات Python
+cd backend
+pip install -r requirements.txt --upgrade
+
+# تحديث تبعيات Node.js
+npm install
+npm update
+```
+
+#### 🔄 إعادة تشغيل الخدمات
+```bash
+# إيقاف وإعادة تشغيل Docker
+docker-compose down
+docker-compose up -d
+
+# أو إعادة تشغيل الخدمة مباشرة
+sudo systemctl restart docker
+```
+
+#### 🧹 تنظيف البيانات المؤقتة
+```bash
+# تنظيف cache المتصفح والبيانات المؤقتة
+docker system prune -f
+docker volume prune -f
+
+# حذف node_modules وإعادة التثبيت
+rm -rf node_modules package-lock.json
+npm install
+```
 
 ---
 
