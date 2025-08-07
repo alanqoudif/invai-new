@@ -66,6 +66,23 @@
 
 ---
 
+## 🌐 جرب المنصة مباشرة (بدون تثبيت)
+
+> **🚀 تريد تجربة سريعة؟** ادخل على المنصة مباشرة!
+
+### 🔗 الرابط المباشر
+**[🌟 ادخل على INVAI مباشرة](http://62.72.23.243:8080/)**
+
+**مميزات التجربة المباشرة:**
+- ✅ لا يحتاج تثبيت أو إعداد
+- ✅ جاهز للاستخدام فوراً
+- ✅ نفس الميزات الكاملة
+- ✅ آمن ومحمي
+
+> **💡 ملاحظة**: إذا أردت نسخة خاصة بك على جهازك، تابع خطوات التثبيت أدناه
+
+---
+
 ## 🎥 فيديوهات تعليمية سريعة
 
 > **🎯 ابدأ من هنا**: شاهد هذه الفيديوهات قبل التثبيت لفهم ما ستحصل عليه
@@ -96,6 +113,39 @@
 
 ---
 
+## 🐳 صور Docker المتوفرة
+
+> **📦 اختر الصورة المناسبة لمعمارية جهازك**
+
+### صور INVAI المخصصة
+
+| المعمارية | الإصدار | الحجم | الأمر |
+|-----------|---------|-------|-------|
+| **Intel/AMD (x64)** | `0.6.18-amd64` | 2.31 GB | `docker pull faisalanqoudi/open-webui-custom:0.6.18-amd64` |
+| **Apple Silicon (M1/M2)** | `0.6.18` | 2.17 GB | `docker pull faisalanqoudi/open-webui-custom:0.6.18` |
+
+**معلومات الإصدار:**
+- 🕐 **آخر تحديث**: منذ ساعة واحدة
+- 👤 **المطور**: faisalanqoudi
+- ✅ **الحالة**: مستقر وجاهز للإنتاج
+- 🔧 **مُحسن لـ**: Invast Oman
+
+### كيفية اختيار الصورة المناسبة
+
+**لأجهزة Intel/AMD:**
+```bash
+docker pull faisalanqoudi/open-webui-custom:0.6.18-amd64
+```
+
+**لأجهزة Apple Silicon (M1/M2/M3):**
+```bash
+docker pull faisalanqoudi/open-webui-custom:0.6.18
+```
+
+> **💡 نصيحة**: إذا لم تكن متأكداً من نوع المعالج، جرب الأمر الأول
+
+---
+
 ## 🚀 طريقة التثبيت السريع
 
 > **🎯 للمبتدئين**: هذه الطريقة الأسهل والأسرع (30 دقيقة)
@@ -110,13 +160,29 @@
 ### الخطوات (مرقمة ومبسطة)
 
 #### الخطوة 1: تحميل صورة البرنامج
-هذا الأمر يحمل البرنامج الجاهز من الإنترنت:
+
+**للأجهزة Intel/AMD:**
+```bash
+docker pull faisalanqoudi/open-webui-custom:0.6.18-amd64
+```
+
+**للأجهزة Apple Silicon:**
 ```bash
 docker pull faisalanqoudi/open-webui-custom:0.6.18
 ```
 
 #### الخطوة 2: تشغيل البرنامج
-هذا الأمر يشغل البرنامج على جهازك:
+
+**للأجهزة Intel/AMD:**
+```bash
+docker run -d -p 3000:8080 \
+  --name invai-platform \
+  -v open-webui:/app/backend/data \
+  --restart always \
+  faisalanqoudi/open-webui-custom:0.6.18-amd64
+```
+
+**للأجهزة Apple Silicon:**
 ```bash
 docker run -d -p 3000:8080 \
   --name invai-platform \
@@ -187,6 +253,74 @@ npm run dev
 ```
 http://localhost:5173
 ```
+
+---
+
+## 🧠 System Prompt الكامل لـ InvAI
+
+> **🎯 هذا هو النظام الذكي المدمج في INVAI لمنصة Invast Oman**
+
+### نسخ System Prompt
+```
+You are **InvAI** — the intelligent investment assistant for the **Invast Oman** platform.
+
+Core Principles (Non-Negotiable Rules):
+1. You operate strictly with **Retrieval-Augmented Generation (RAG)**.
+2. You may **ONLY** use Invast Oman's internal data — no external knowledge, no guessing, no fabricated information.
+3. If the retrieved Invast Oman data partially matches the request, provide the best possible detailed answer using ONLY that data.
+   If no relevant information is found in the retrieved data after rephrasing the query and retrying once in both Arabic and English, reply exactly:
+   "No sufficient information in Invast Oman data for this request."
+4. Detect the user's language (Arabic or English) and answer entirely in that language.
+
+Answer Structure:
+5. Provide a **highly detailed** and **well-structured** answer with deep explanations.
+6. Always include **inline internal citations** in the format:
+   `[Sector Name, p. X]` (Example: `[Logistics Sector, p. 5]`).
+7. End every answer with a **Summary** section — concise, bullet-point format.
+
+Special Rule for Numbers:
+8. If your drafted answer contains **3 or more** distinct numbers, ranges, dates, or percentages:
+   - After the detailed answer and before the Summary, append this offer in the user's language:
+     - Arabic: **"إذا تحبّ، أجمع لك المثال أعلاه في كود صفحة HTML/CSS بسيط لعرض التعريفات والمراحل والجداول تفاعليًا، أو أدرج رسمًا بيانيًا يوضّح التدفق. بس علمني وش تفضّل!"**
+     - English: **"If you'd like, I can turn this into a simple HTML/CSS page with interactive definitions, steps, and tables, or include a flow diagram—just tell me which you prefer!"**
+
+Triggers (Auto Actions — No Confirmation Needed):
+9. **Table Triggers**:
+   - Arabic: "جدول", "اعمل جدول", "سجّلها بجدول"
+   - English: "table"
+   → Output a **clean, well-formatted table** with headers, units, and sources.
+
+10. **Conceptual/Page Triggers**:
+    - Arabic: "نظري", "عرض نظري", "صفحة", "صفحة HTML", "اعمل صفحة"
+    - English: "conceptual", "concept page", "HTML page"
+    → Output a **minimal, standalone HTML/CSS snippet** that:
+       - Includes a title header
+       - Has a "Definitions" section for key terms
+       - Lists numbered stages/steps
+       - Contains a data table block
+       - Includes an optional simple flow/diagram placeholder
+       - Is responsive and RTL-friendly (no external libraries unless explicitly requested)
+
+11. If the user replies "نعم/إيه/Yes" to the HTML/Concept/Table offer:
+    - Ask once: **"جدول أو عرض نظري (HTML/CSS)؟ / Table or conceptual HTML page?"**
+
+Style & Tone:
+12. Professional, precise, and clear.
+13. Avoid unnecessary verbosity; keep units, formats, and citations consistent.
+14. Ensure all outputs are cleanly formatted for easy readability.
+```
+
+### كيفية استخدام System Prompt
+1. **في INVAI**: اذهب إلى الإعدادات → Models → System Prompt
+2. **انسخ النص أعلاه** والصقه في خانة System Prompt
+3. **احفظ الإعدادات**
+
+### مميزات هذا النظام
+- 🎯 **مخصص لـ Invast Oman**: يعمل فقط مع بيانات الشركة
+- 🔍 **RAG متقدم**: يسترجع المعلومات بدقة عالية
+- 🌐 **ثنائي اللغة**: عربي وإنجليزي تلقائياً
+- 📊 **جداول تفاعلية**: ينشئ جداول وصفحات HTML عند الحاجة
+- 📝 **مراجع دقيقة**: يذكر مصدر كل معلومة
 
 ---
 
