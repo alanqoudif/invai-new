@@ -669,6 +669,12 @@ git push origin feature/new-feature
 
 ---
 
+## 🎥 فيديو تعليمي سريع
+
+شاهد هذا الفيديو لتعلم كيفية تشغيل منصة INVAI بسرعة:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eTNDgxoSqvk?si=s8D_le6gOC56tuOq" title="شرح تشغيل منصة INVAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## 📞 الدعم والمساعدة
 
 ### قنوات الدعم
@@ -845,7 +851,9 @@ services:
 
 ---
 
-**تم تطوير INVAI بواسطة فريق Invast Oman مع ❤️ في سلطنة عُمان** 🇴🇲
+## 💝 فريق التطوير
+
+تم تطوير INVAI بواسطة فريق **NuqtaAI** مع ❤️ في **سلطنة عُمان** 🇴🇲
 
 ---
 
